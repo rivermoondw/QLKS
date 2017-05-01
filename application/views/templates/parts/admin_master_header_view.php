@@ -55,8 +55,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="<?php echo base_url(); ?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle"
-                         alt="User Image">
+                    <img src="<?php echo base_url(); ?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p>Alexander Pierce</p>
@@ -68,8 +67,7 @@
                 <div class="input-group">
                     <input type="text" name="q" class="form-control" placeholder="Search...">
                     <span class="input-group-btn">
-                        <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i
-                                    class="fa fa-search"></i></button>
+                        <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
                     </span>
                 </div>
             </form>
@@ -77,7 +75,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header">Menu chính</li>
-                <li class="treeview <?php echo (isset($active_parent) && $active_parent == 'room') ? 'active' : ''; ?>">
+                <li class="treeview <?php echo (isset($active_parent) && $active_parent == 'room') ? 'active' : '';  ?>">
                     <a href="#">
                         <span>Phòng</span>
                         <span class="pull-right-container">
@@ -85,18 +83,12 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="<?php echo (isset($active) && $active == 'room') ? 'active' : ''; ?>"><a
-                                    href="<?php echo base_url(); ?>admin/room"><i
-                                        class="fa fa-circle-o <?php echo (isset($active) && $active == 'room') ? 'text-aqua' : ''; ?>"></i>Danh
-                                sách phòng</a></li>
-                        <li class="<?php echo (isset($active) && $active == 'add_room') ? 'active' : ''; ?>"><a
-                                    href="<?php echo base_url(); ?>admin/room/add"><i
-                                        class="fa fa-circle-o <?php echo (isset($active) && $active == 'add_room') ? 'text-aqua' : ''; ?>"></i>Thêm
-                                phòng</a>
+                        <li class="<?php echo (isset($active) && $active == 'room') ? 'active' : '';  ?>"><a href="<?php echo base_url(); ?>admin/room"><i class="fa fa-circle-o <?php echo (isset($active) && $active == 'room') ? 'text-aqua' : '';  ?>"></i>Danh sách phòng</a></li>
+                        <li class="<?php echo (isset($active) && $active == 'add_room') ? 'active' : '';  ?>"><a href="<?php echo base_url(); ?>admin/room/add"><i class="fa fa-circle-o <?php echo (isset($active) && $active == 'add_room') ? 'text-aqua' : '';  ?>"></i>Thêm phòng</a>
                         </li>
                     </ul>
                 </li>
-                <li class="treeview <?php echo (isset($active_parent) && $active_parent == 'service') ? 'active' : ''; ?>">
+                <li class="treeview <?php echo (isset($active_parent) && $active_parent == 'service') ? 'active' : '';  ?>">
                     <a href="#">
                         <span>Dịch vụ</span>
                         <span class="pull-right-container">
@@ -104,14 +96,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="<?php echo (isset($active) && $active == 'service') ? 'active' : ''; ?>"><a
-                                    href="<?php echo base_url(); ?>admin/service"><i
-                                        class="fa fa-circle-o <?php echo (isset($active) && $active == 'service') ? 'text-aqua' : ''; ?>"></i>Danh
-                                sách dịch vụ</a></li>
-                        <li class="<?php echo (isset($active) && $active == 'add_service') ? 'active' : ''; ?>"><a
-                                    href="<?php echo base_url(); ?>admin/service/add"><i
-                                        class="fa fa-circle-o <?php echo (isset($active) && $active == 'add_service') ? 'text-aqua' : ''; ?>"></i>Thêm
-                                dịch vụ</a>
+                        <li class="<?php echo (isset($active) && $active == 'service') ? 'active' : '';  ?>"><a href="<?php echo base_url(); ?>admin/service"><i class="fa fa-circle-o <?php echo (isset($active) && $active == 'service') ? 'text-aqua' : '';  ?>"></i>Danh sách dịch vụ</a></li>
+                        <li class="<?php echo (isset($active) && $active == 'add_service') ? 'active' : '';  ?>"><a href="<?php echo base_url(); ?>admin/service/add"><i class="fa fa-circle-o <?php echo (isset($active) && $active == 'add_service') ? 'text-aqua' : '';  ?>"></i>Thêm dịch vụ</a>
                         </li>
                     </ul>
                 </li>

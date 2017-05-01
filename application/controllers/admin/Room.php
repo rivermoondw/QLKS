@@ -167,18 +167,6 @@ class Room extends Admin_Controller
     public function edit($id = 0)
     {
         $this->data['content_header'] = 'Sửa phòng';
-        $this->data['before_head'] = '<!-- Select2 -->
-  <link rel="stylesheet" href="' . base_url() . 'assets/admin/plugins/select2/select2.min.css">';
-        $this->data['before_body'] = '<!-- Select2 -->
-<script src="' . base_url() . 'assets/admin/plugins/select2/select2.full.min.js"></script>
-<script>
-  $(function () {
-    //Initialize Select2 Elements
-    $(".select2").select2({
-        minimumResultsForSearch: Infinity
-    });
-  });
-</script>';
         $this->data['rank'] = $this->model_room->rank_list();
         $this->data['type'] = $this->model_room->type_list();
         $room = $this->model_room->get($id);

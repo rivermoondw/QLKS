@@ -13,12 +13,12 @@
             echo form_open('', $att);
             ?>
             <div class="box-body">
-                <div class="form-group <?php echo (form_error('room')) ? 'has-error' : ''; ?>">
+                <div class="form-group <?php echo (form_error('room')) ? 'has-error' : '';  ?>">
                     <label>Tên phòng</label>
                     <input type="text" class="form-control" placeholder="Nhập tên phòng" name="room"
                            value="<?php echo set_value('room', ''); ?>">
                 </div>
-                <div class="form-group <?php echo (form_error('tel')) ? 'has-error' : ''; ?>">
+                <div class="form-group <?php echo (form_error('tel')) ? 'has-error' : '';  ?>">
                     <label>Số điện thoại phòng</label>
                     <input type="text" class="form-control" placeholder="Nhập số điện thoại phòng" name="tel"
                            value="<?php echo set_value('tel', ''); ?>">
@@ -43,7 +43,7 @@
                         ?>
                     </select>
                 </div>
-                <div class="form-group <?php echo (form_error('price')) ? 'has-error' : ''; ?>">
+                <div class="form-group <?php echo (form_error('price')) ? 'has-error' : '';  ?>">
                     <label>Giá phòng</label>
                     <input type="text" class="form-control" placeholder="Nhập giá phòng" name="price"
                            value="<?php echo set_value('price', ''); ?>">

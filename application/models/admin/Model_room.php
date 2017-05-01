@@ -85,7 +85,7 @@ class Model_room extends CI_Model
         if ($flag > 0) {
             return array(
                 'type' => 'success',
-                'message' => 'Đã xóa (' . count($checkbox) . ') dữ liệu'
+                'message' => 'Đã xóa ('. count($checkbox) . ') dữ liệu'
             );
         } else {
             return array(
@@ -98,11 +98,11 @@ class Model_room extends CI_Model
     public function edit($id = 0)
     {
         $this->db->where('room_id', (int)$id)->update('room', array(
-            'room' => $this->input->post('room'),
-            'tel' => $this->input->post('tel'),
-            'rank_id' => $this->input->post('rank_id'),
-            'type_id' => $this->input->post('type_id'),
-            'price' => $this->input->post('price')
+                'room' => $this->input->post('room'),
+                'tel' => $this->input->post('tel'),
+                'rank_id' => $this->input->post('rank_id'),
+                'type_id' => $this->input->post('type_id'),
+                'price' => $this->input->post('price')
         ));
         $flag = $this->db->affected_rows();
         if ($flag > 0) {
@@ -118,8 +118,7 @@ class Model_room extends CI_Model
         }
     }
 
-    public function total()
-    {
+    public function total(){
         return $this->db->get('room')->num_rows();
     }
 }

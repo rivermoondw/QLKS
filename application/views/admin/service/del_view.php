@@ -15,8 +15,7 @@
                 <div class="form-group row">
                     <div class="col-md-6">
                         <label>Tên phòng</label>
-                        <input type="text" class="form-control" placeholder="Nhập tên phòng" name="room"
-                               value="<?php echo $room['room']; ?>">
+                        <input type="text" class="form-control" placeholder="Nhập tên phòng" name="room" value="<?php echo $room['room']; ?>">
                     </div>
                 </div>
             </div>
