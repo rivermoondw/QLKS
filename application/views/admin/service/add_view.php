@@ -13,12 +13,12 @@
             echo form_open('', $att);
             ?>
             <div class="box-body">
-                <div class="form-group <?php echo (form_error('service')) ? 'has-error' : '';  ?>">
+                <div class="form-group <?php echo (form_error('service')) ? 'has-error' : ''; ?>">
                     <label>Tên dịch vụ</label>
                     <input type="text" class="form-control" placeholder="Nhập tên dịch vụ" name="service"
                            value="<?php echo set_value('service', ''); ?>">
                 </div>
-                <div class="form-group <?php echo (form_error('price')) ? 'has-error' : '';  ?>">
+                <div class="form-group <?php echo (form_error('price')) ? 'has-error' : ''; ?>">
                     <label>Giá dịch vụ</label>
                     <input type="text" class="form-control" placeholder="Nhập giá dịch vụ" name="price"
                            value="<?php echo set_value('price', ''); ?>">

@@ -6,7 +6,7 @@ $this->load->view('templates/parts/admin_master_header_view'); ?>
         <section class="content-header">
             <h1>
                 <?php
-                echo $content_header;
+                echo isset($content_header)?$content_header:'';
                 ?>
             </h1>
         </section>

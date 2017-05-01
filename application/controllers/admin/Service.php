@@ -62,14 +62,13 @@ class Service extends Admin_Controller
     });
   });
 </script>';
-        if ($this->input->post('btn-delete')){
+        if ($this->input->post('btn-delete')) {
             $checkbox = $this->input->post('checkbox');
-            if (is_array($checkbox)){
+            if (is_array($checkbox)) {
                 $flag = $this->model_service->del_list($checkbox);
                 $this->session->set_flashdata('message_flashdata', $flag);
                 redirect('admin/service');
-            }
-            else{
+            } else {
                 $this->session->set_flashdata('message_flashdata', array(
                     'type' => 'error',
                     'message' => 'Bạn phải chọn đối tượng'
@@ -104,29 +103,17 @@ class Service extends Admin_Controller
         $this->pagination->initialize($config);
         $this->data['pagination'] = $this->pagination->create_links();
 
-        $total_page = ceil($config['total_rows']/$config['per_page']);
-        $page = ($page > $total_page)?$total_page:$page;
-        $page = ($page < 1)?1:$page;
+        $total_page = ceil($config['total_rows'] / $config['per_page']);
+        $page = ($page > $total_page) ? $total_page : $page;
+        $page = ($page < 1) ? 1 : $page;
         $page = $page - 1;
-        $this->data['list_service'] = $this->model_service->get_list(($page*$config['per_page']), $config['per_page']);
+        $this->data['list_service'] = $this->model_service->get_list(($page * $config['per_page']), $config['per_page']);
         $this->render('admin/service/list_view');
     }
 
     public function add()
     {
         $this->data['active'] = 'add_service';
-        $this->data['before_head'] = '<!-- Select2 -->
-  <link rel="stylesheet" href="' . base_url() . 'assets/admin/plugins/select2/select2.min.css">';
-        $this->data['before_body'] = '<!-- Select2 -->
-<script src="' . base_url() . 'assets/admin/plugins/select2/select2.full.min.js"></script>
-<script>
-  $(function () {
-    //Initialize Select2 Elements
-    $(".select2").select2({
-        minimumResultsForSearch: Infinity
-    });
-  });
-</script>';
         $this->data['content_header'] = 'Thêm dịch vụ';
         $this->load->library('form_validation');
         if ($this->input->post('submit')) {
@@ -135,8 +122,7 @@ class Service extends Admin_Controller
             $this->form_validation->set_error_delimiters('<div class="text-red"><i class="fa fa-times-circle-o"></i> <b>', '</b></div>');
             if ($this->form_validation->run() === FALSE) {
                 $this->render('admin/service/add_view');
-            }
-            else{
+            } else {
                 $flag = $this->model_service->add();
                 $this->session->set_flashdata('message_flashdata', $flag);
                 redirect('admin/service');
@@ -149,7 +135,7 @@ class Service extends Admin_Controller
     public function del($id = 0)
     {
         $service = $this->model_service->get($id);
-        if (!isset($service) || count($service) == 0){
+        if (!isset($service) || count($service) == 0) {
             $this->session->set_flashdata('message_flashdata', array(
                 'type' => 'error',
                 'message' => 'Dịch vụ không tồn tại'
@@ -166,7 +152,7 @@ class Service extends Admin_Controller
         $this->data['content_header'] = 'Sửa dịch vụ';
         $service = $this->model_service->get($id);
         $this->data['service'] = $service;
-        if (!isset($service) || count($service) == 0){
+        if (!isset($service) || count($service) == 0) {
             $this->session->set_flashdata('message_flashdata', array(
                 'type' => 'error',
                 'message' => 'Dịch vụ không tồn tại'
@@ -180,8 +166,7 @@ class Service extends Admin_Controller
             $this->form_validation->set_error_delimiters('<div class="text-red"><i class="fa fa-times-circle-o"></i> <b>', '</b></div>');
             if ($this->form_validation->run() === FALSE) {
                 $this->render('admin/service/edit_view');
-            }
-            else{
+            } else {
                 $flag = $this->model_service->edit($service['service_id']);
                 $this->session->set_flashdata('message_flashdata', $flag);
                 redirect('admin/service');
