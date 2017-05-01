@@ -14,16 +14,29 @@
                         <th>Loại phòng</th>
                         <th>Giá phòng</th>
                         <th>Tình trạng</th>
+                        <th>Ngày đặt phòng</th>
                     </tr>
                     </thead>
-                    <tr>
-                        <td>101</td>
-                        <td>101</td>
-                        <td>Deluxe</td>
-                        <td>Single room</td>
-                        <td>100000</td>
-                        <td>Còn trống</td>
-                    </tr>
+                    <?php
+                    if (isset($room) && count($room)){
+                        foreach ($room as $key => $val){
+                            ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($val['room']); ?></td>
+                                <td><?php echo htmlspecialchars($val['tel']); ?></td>
+                                <td><?php echo htmlspecialchars($val['rank']); ?></td>
+                                <td><?php echo htmlspecialchars($val['type']); ?></td>
+                                <td><?php echo htmlspecialchars($val['price']); ?></td>
+                                <td><?php echo ($val['state']==0)?'Còn trống':'Đang thuê'; ?></td>
+                                <td></td>
+                            </tr>
+                            <?php
+                        }
+                    }
+                    else{
+                        echo '<tr><td colspan="7">Không có dữ liệu</td></tr>';
+                    }
+                    ?>
                 </table>
             </div>
         </div>

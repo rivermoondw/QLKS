@@ -2,12 +2,27 @@
     <div class="box box-primary">
         <div class="box-body">
             <?php
+            $message_flashdata = $this->session->flashdata('message_flashdata');
+            if (isset($message_flashdata) && count($message_flashdata)){
+                if ($message_flashdata['type'] == 'success'){
+                    ?>
+                    <div class="alert alert-success alert-dismissible"><i class="icon fa fa-check"></i> <?php echo $message_flashdata['message']; ?></div>
+                    <?php
+                }
+                else{
+                    ?>
+                    <div class="alert alert-danger alert-dismissible"><i class="icon fa fa-ban"></i> <?php echo $message_flashdata['message']; ?></div>
+                    <?php
+                }
+            }
+            ?>
+            <?php
             if (isset($list_room) && count($list_room)){
                 foreach ($list_room as $key => $val){
             ?>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box <?php echo ($val['state'] == 0)?'bg-aqua':'bg-red' ?>">
-                    <a href="#" class="custom"><span class="info-box-icon"><i class="fa fa-home"></i></span></a>
+                    <a href="<?php echo base_url().'admin/booking/checkin/'.$val['room_id'];?>" class="custom"><span class="info-box-icon"><i class="fa fa-home"></i></span></a>
                     <div class="info-box-content">
                         <span class="info-box-number"><?php echo $val['room']; ?></span>
                         <span class="info-box-text"><?php echo $val['rank']; ?></span>

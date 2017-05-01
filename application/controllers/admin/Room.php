@@ -143,7 +143,6 @@ class Room extends Admin_Controller
                 $flag = $this->model_room->add();
                 $this->session->set_flashdata('message_flashdata', $flag);
                 redirect('admin/room');
-
             }
         }
         $this->render('admin/room/add_view');

@@ -24,6 +24,7 @@ class Model_room extends CI_Model
             ->join('rank', 'room.rank_id = rank.rank_id')
             ->join('type', 'room.type_id = type.type_id')
             ->limit($limit, $start)
+            ->order_by('room', 'ASC')
             ->get()->result_array();
     }
 

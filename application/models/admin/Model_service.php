@@ -12,6 +12,7 @@ class Model_service extends CI_Model
         return $this->db->select('service_id, service, price')
             ->from('service')
             ->limit($limit, $start)
+            ->order_by('service', 'ASC')
             ->get()->result_array();
     }
 
