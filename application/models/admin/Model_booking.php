@@ -114,5 +114,7 @@ class Model_booking extends CI_Model{
             ->get()->result_array();
     }
 
+    public function get_booking_detail($room_id = 0){
 
+    }
 }

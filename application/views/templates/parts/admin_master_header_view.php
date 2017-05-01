@@ -35,7 +35,7 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Admin</b>LTE</span>
+            <span class="logo-lg"><strong>Quản lý khách sạn</strong></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -55,17 +55,18 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="<?php echo base_url(); ?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle"
+                    <img src="<?php echo base_url(); ?>assets/admin/dist/img/Screenshot_12.png" class="img-circle"
                          alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    <p>Nhân viên lễ tân</p>
+                    <p>Yowzah</p>
                 </div>
             </div>
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header"><h4>Menu chính</h4></li>
+                <li class="<?php echo (isset($active_parent) && $active_parent == 'booking') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>admin/booking"><span>Trang chủ</span></a></li>
                 <li class="treeview <?php echo (isset($active_parent) && $active_parent == 'room') ? 'active' : ''; ?>">
                     <a href="#">
                         <span>Phòng</span>

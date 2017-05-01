@@ -14,7 +14,8 @@
                         <th>Loại phòng</th>
                         <th>Giá phòng</th>
                         <th>Tình trạng</th>
-                        <th>Ngày đặt phòng</th>
+                        <th>Ngày đến</th>
+                        <th>Ngày trả</th>
                     </tr>
                     </thead>
                     <?php
@@ -28,6 +29,7 @@
                                 <td><?php echo htmlspecialchars($val['type']); ?></td>
                                 <td><?php echo htmlspecialchars($val['price']); ?></td>
                                 <td><?php echo ($val['state']==0)?'Còn trống':'Đang thuê'; ?></td>
+                                <td></td>
                                 <td></td>
                             </tr>
                             <?php

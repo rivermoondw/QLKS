@@ -21,8 +21,20 @@
                 foreach ($list_room as $key => $val){
             ?>
             <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="info-box <?php echo ($val['state'] == 0)?'bg-aqua':'bg-red' ?>">
-                    <a href="<?php echo base_url().'admin/booking/checkin/'.$val['room_id'];?>" class="custom"><span class="info-box-icon"><i class="fa fa-home"></i></span></a>
+                <?php
+                if ($val['state'] == 0){
+                ?>
+                <div class="info-box bg-aqua">
+                    <a href="<?php echo base_url().'admin/booking/checkin/'; ?>" class="custom"><span class="info-box-icon"><i class="fa fa-home"></i></span></a>
+                <?php
+                }
+                else{
+                ?>
+                <div class="info-box bg-red">
+                    <a href="<?php echo base_url().'admin/booking/detail/'.$val['room_id'];?>" class="custom"><span class="info-box-icon"><i class="fa fa-home"></i></span></a>
+                <?php
+                }
+                ?>
                     <div class="info-box-content">
                         <span class="info-box-number"><?php echo $val['room']; ?></span>
                         <span class="info-box-text"><?php echo $val['rank']; ?></span>

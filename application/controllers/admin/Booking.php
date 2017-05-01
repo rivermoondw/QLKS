@@ -6,6 +6,7 @@ class Booking extends Admin_Controller {
         parent::__construct();
         $this->data['page_title'] = 'Đặt phòng';
         $this->load->model('admin/model_booking');
+        $this->data['active_parent'] = 'booking';
     }
 
     public function index(){
@@ -33,8 +34,8 @@ class Booking extends Admin_Controller {
             ));
             redirect('admin/booking');
         }
-
         $this->data['content_header'] = 'Thông tin đặt phòng';
+        $this->model_booking->get_booking_detail($room_id);
         $this->render('admin/booking/detail_view');
     }
 
