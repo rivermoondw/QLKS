@@ -46,7 +46,7 @@
                         <td><?php echo $val['type']; ?></td>
                         <td><?php echo htmlspecialchars($val['price']); ?></td>
                         <td>
-                            <a href="<?php echo base_url(); ?>admin/room/edit/<?php echo $val['room_id']; ?>"><button type="button" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i> Sửa</button></a>
+                            <a href="<?php echo base_url(); ?>admin/room/edit/<?php echo $val['room_id']; ?>"><button type="button" class="btn btn-default btn-xs"><i class="fa fa-edit"></i> Sửa</button></a>
                             <a href="<?php echo base_url(); ?>admin/room/del/<?php echo $val['room_id']; ?>"><button type="button" class="btn btn-default btn-xs del-btn"><i class="fa fa-times"></i> Xóa</button></a>
                         </td>
                     </tr>

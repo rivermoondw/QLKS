@@ -67,7 +67,7 @@ class Model_service extends CI_Model
         if ($flag > 0) {
             return array(
                 'type' => 'success',
-                'message' => 'Đã xóa ('. count($checkbox) . ') dữ liệu'
+                'message' => 'Đã xóa (' . count($checkbox) . ') dữ liệu'
             );
         } else {
             return array(
@@ -97,7 +97,8 @@ class Model_service extends CI_Model
         }
     }
 
-    public function total(){
+    public function total()
+    {
         return $this->db->get('service')->num_rows();
     }
 }
