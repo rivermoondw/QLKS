@@ -86,6 +86,7 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="treeview <?php echo (isset($active_parent) && $active_parent == 'service') ? 'active' : ''; ?>">
                     <a href="#">
                         <span>Dịch vụ</span>
@@ -105,6 +106,28 @@
                         </li>
                     </ul>
                 </li>
+
+                <li class="treeview <?php echo (isset($active_parent) && $active_parent == 'service') ? 'active' : ''; ?>">
+                    <a href="#">
+                        <span>Khách Hàng</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="<?php echo (isset($active) && $active == 'service') ? 'active' : ''; ?>"><a
+                                    href="<?php echo base_url(); ?>admin/customer"><i
+                                        class="fa fa-circle-o <?php echo (isset($active) && $active == 'customer') ? 'text-aqua' : ''; ?>"></i>Danh
+                                sách khách hàng</a></li>
+                        <li class="<?php echo (isset($active) && $active == 'add_service') ? 'active' : ''; ?>"><a
+                                    href="<?php echo base_url(); ?>admin/customer/add"><i
+                                        class="fa fa-circle-o <?php echo (isset($active) && $active == 'add_customer') ? 'text-aqua' : ''; ?>"></i>Thêm
+                                Khách Hàng</a>
+                        </li>
+                    </ul>
+                </li>
+
+    
             </ul>
         </section>
         <!-- /.sidebar -->
