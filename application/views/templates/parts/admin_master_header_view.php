@@ -107,7 +107,7 @@
                     </ul>
                 </li>
 
-                <li class="treeview <?php echo (isset($active_parent) && $active_parent == 'service') ? 'active' : ''; ?>">
+                <li class="treeview <?php echo (isset($active_parent) && $active_parent == 'customer') ? 'active' : ''; ?>">
                     <a href="#">
                         <span>Khách Hàng</span>
                         <span class="pull-right-container">
@@ -115,7 +115,7 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="<?php echo (isset($active) && $active == 'service') ? 'active' : ''; ?>"><a
+                        <li class="<?php echo (isset($active) && $active == 'customer') ? 'active' : ''; ?>"><a
                                     href="<?php echo base_url(); ?>admin/customer"><i
                                         class="fa fa-circle-o <?php echo (isset($active) && $active == 'customer') ? 'text-aqua' : ''; ?>"></i>Danh
                                 sách khách hàng</a></li>
